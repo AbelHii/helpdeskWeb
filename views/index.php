@@ -10,37 +10,15 @@ and open the template in the editor.
         <title>Helpdesk</title>        
         <link rel="stylesheet" type="text/css" href="../public/css/style.css"> 
 	<link rel="shortcut icon" href="../public/imgs/favicon.png">
-        <!--<style>
-                body{
-                margin: 0px;
-                padding: 0px;
-                height: auto;
-                font-family: Arial, Sans-serif;
-                background-color: #FFFEF6;
-                }
-                #container{
-                    text-align: center;
-                    //padding-top: 10px;
-                }
-                #login{ 
-                    vertical-align: text-top;
-                }
-                
-        </style>-->
     </head>
     
     <body>  
-        <div id="a">hello </div>
-            <div id="container">
-                
-                <img src ="../public/imgs/cmsb.jpg" height="100" width="200"/>
-                
-                    <?php
-                
-                //$stylesheet = "../public/css/style.css";
-                //echo file_get_contents($stylesheet);
-              // define variables and set to empty values
-              $username = $password = "";
+        <div id="container">
+            <img src ="../public/imgs/cmsb.jpg" height="80" width="140"/>
+            <?php
+
+                // define variables and set to empty values
+                $username = $password = "";
 
                 if (filter_input(INPUT_SERVER, "REQUEST_METHOD") == "POST") {
                    $username = test_input(filter_input(INPUT_POST, "username"));
@@ -53,22 +31,26 @@ and open the template in the editor.
                    $data = htmlspecialchars($data);
                    return $data;
                 }
-                ?>
-
+            ?>
+            
+            <div id="loginForm">
                 <h2>Login</h2>
                 <form id="login" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
-                   Name: <input type="text" name="username">
-                   <br><br>
-                   Password: <input type="password" name="password">
-                   <br><br>
-                   <input type="submit" name="Login" value="Submit"> 
+                    <label>Name:&nbsp</label>
+                    <input type="text" name="username" maxlength="20">
+                    <br><br>
+                    <label>Password: &nbsp</label>
+                    <input type="password" name="password" maxlength="20">
+                    <br><br>
+                    <input type="submit" name="Login" value="Submit" style="width:100px; border-style:groove"> 
                 </form>
-
-                <?php
+            </div>
+            
+            <?php
                 echo "<h3>Your Input:</h3>";
                 echo "Username: " . $username;
                 echo "<br>Password: " . $password;
-                ?>
-            </div>
-        </body>
+            ?>
+        </div>
+    </body>
 </html>
