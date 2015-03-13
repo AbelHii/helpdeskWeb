@@ -8,9 +8,9 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>Helpdesk</title>        
-       <!-- <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>http://127.0.0.1/cradar/public/css/style.css"> -->
-	<link rel="shortcut icon" href="imgs/favicon.png">
-        <style>
+        <link rel="stylesheet" type="text/css" href="../public/css/style.css"> 
+	<link rel="shortcut icon" href="../public/imgs/favicon.png">
+        <!--<style>
                 body{
                 margin: 0px;
                 padding: 0px;
@@ -26,13 +26,19 @@ and open the template in the editor.
                     vertical-align: text-top;
                 }
                 
-        </style>
+        </style>-->
     </head>
     
     <body>  
+        <div id="a">hello </div>
             <div id="container">
-                <img src ="public/imgs/cmsb.jpg" heigt="100" width="200"/>
-                <?php
+                
+                <img src ="../public/imgs/cmsb.jpg" height="100" width="200"/>
+                
+                    <?php
+                
+                //$stylesheet = "../public/css/style.css";
+                //echo file_get_contents($stylesheet);
               // define variables and set to empty values
               $username = $password = "";
 
