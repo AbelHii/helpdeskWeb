@@ -15,7 +15,6 @@ body{
     padding: 50px;
     height: auto;
     font-family: Arial, Sans-serif;
-    background-color: #FFFEF6;
 }
 label{
     font-weight: bold; 
@@ -26,11 +25,22 @@ label{
     text-align: left;
 }
 input{
-    color:#ff0000;
-    border-style:solid;
-    font-weight:bold;
+    color:#333333;
+    border: 1px solid #c0c0c0;
+    background-color:#F2F3F3;
     width:230px;
-    border-color: #000000;
+}
+#footer{
+    position:absolute;
+    bottom:0;
+    padding: 0px;
+}
+#footer .p{
+    text-align: center;
+}
+#error{
+    font-size: 14px; 
+    color: crimson;
 }
 
 /*Login index*/
